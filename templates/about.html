@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - VerifiDoc</title>
+    <style>/* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        /* Header */
+header {
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center; /* Ensures vertical centering */
+    justify-content: space-between;
+    padding: 10px 30px; /* Reduced padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 60px; /* Fixed height */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px; /* Reduced height */
+    width: auto;
+}
+
+.logo-container h1 {
+    font-size: 20px; /* Adjusted font size */
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    animation: rotateLogo 3s linear infinite;
+}
+
+
+.logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="VerifiDOC Logo">
+            <h1>VerifiDOC</h1>
+        </div>
+       
+        <nav>
+            <ul>
+                    <li><a href="{{ url_for('detect') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <h1>About VerifiDoc</h1>
+    <p><strong>VerifiDoc</strong> is an AI-powered plagiarism detection tool that helps students, educators, and professionals ensure originality in their work.</p>
+    <p>Our system compares submitted content with multiple sources to detect similarities and provides instant results.It is designed to be fast, reliable, and accessible, with a simple user-friendly interface that makes checking plagiarism effortless.</p>
+    <p> Our mission is to promote academic integrity and authentic writing. We aim to be a trusted partner for originality verification, supporting the creation of unique and credible content.
+        </p></p>
+</div>
+
+</body>
+</html>
