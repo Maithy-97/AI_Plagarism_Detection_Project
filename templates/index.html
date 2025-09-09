@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifiDOC - Text Plagiarism Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="VerifiDOC Logo">
+            <h1>VerifiDOC</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('detect') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        Detect Text Plagiarism with AI-Powered VerifiDOC
+    </div>
+
+    <!-- Text Plagiarism Section -->
+    <div class="upload-section" id="upload">
+        <h2>Submit Text for Analysis</h2>
+        <form action="/" method="post" >
+            <textarea name="text_input" rows="8" cols="60" placeholder="Paste your text here..." required></textarea>
+            <br>
+            <button type="submit">Check Plagiarism</button>
+        </form>
+            </div>
+
+    <!-- Result Section -->
+     {% if result %}
+    <div class="result-section">
+        <h2>Result</h2>
+        <p id="result-text">{{result}}</p>
+    </div>
+    {% endif %}
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 VerifiDOC. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
